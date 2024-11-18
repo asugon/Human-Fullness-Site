@@ -1,0 +1,487 @@
+/* Selector + propiedad + valor*/
+/* CSS HEX
+--texto: #161616
+--títulos: #ffffff;
+--background: #8da4a7;
+--background head: (221, 235, 225, 0.75) *el cuatro numero del RGB determina la opacidad
+*/
+
+
+/* Reset de CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+    
+}
+
+input[type="submit"] {
+    appearance: none;
+    /* Remueve el estilo por defecto en algunos navegadores */
+    background: none;
+    /* Sin color de fondo */
+    border: none;
+    /* Sin borde */
+    color: inherit;
+    /* Toma el color de fuente del elemento padre */
+    padding: 0;
+    /* Sin padding */
+    font: inherit;
+    /* Hereda la fuente del elemento padre */
+    cursor: pointer;
+    /* Cambia el cursor para indicar que es un botón */
+}
+
+
+/* inicia CSS*/
+
+/*General*/
+
+body {
+    background-color: #e7e7e7;
+    font-family: "Maven Pro", sans-serif;
+    color: 314648;
+    
+}
+
+header {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    top: 0%;
+    background-color: #183d55;
+    align-items: center;
+    padding: 1%;
+    height: 13vh;
+    width: 100vw;
+    color: #e7e7e7;
+}
+@media only screen and (max-width : 900px){
+    header{
+        justify-content: space-between
+    }
+}
+
+#logo-up {
+    padding: 10px 0px 0px 30px;
+}
+/* logo media query para celular o tablet*/
+@media only screen and (max-width : 900px){
+    #logo-up {
+        transform: scale(.5);
+        padding: 0px;
+
+
+    }
+    }
+
+nav {
+    width: 60%;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+/* Nav media query para celular o tablet*/
+@media only screen and (max-width : 900px) {
+    nav{
+        margin-right: 0px;
+        width: auto;
+        font-size: 1rem;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+    }
+}
+
+
+h1 {
+    color: #183d55;
+    font-size: 3em;
+    text-align: center;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-top: 6%;
+    letter-spacing: 15px;
+    font-weight: 500;
+}
+
+/* H1 media query para celular o tablet*/
+@media only screen and (max-width : 900px){
+    h1{
+        margin-left: 10%;
+        margin-right: 10%;
+        letter-spacing: 5px;
+        font-size: 2em;
+        word-spacing: 1px;
+        text-align: center;
+    }
+}
+
+
+/*--------Footer */
+
+footer {
+    padding: 20px;
+    padding-bottom: 0%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 3%;
+
+}
+
+
+.logo-but {
+    transform: scale(0.7);
+    opacity: .5;
+}
+
+@media only screen and (max-width : 900px){
+    footer{
+        transform: scale(.8);
+        align-items: start;
+        justify-content: space-around;
+        padding: 0%;
+    }
+}
+
+/*Página Inicio*/
+
+/*--------Bótones página de inicio*/
+
+/* Desktop*/
+
+.botones-principales {
+    all: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+    /* Cambia el cursor a una mano cuando pase sobre el botón */
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: none;
+    font-family: "Anton", sans-serif;
+    padding-top: 10%;
+}
+
+@media only screen and (max-width : 900px) {
+    .botones-principales {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-top: 20%;
+    }
+}
+
+#boton-1 {
+    padding: 20px 105px;
+    box-sizing: border-box;
+    border-color: #e7e7e7;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: #183d55;
+    font-size: 2em;
+    justify-content: space-between;
+    color: #e7e7e7;
+}
+
+#boton-2 {
+    padding: 20px;
+    box-sizing: border-box;
+    border-color: #e7e7e7;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: #183d55;
+    font-size: 2em;
+    justify-content: space-between;
+    color: #e7e7e7;
+}
+
+@media only screen and (max-width : 900px){
+#boton-1{
+    font-size: 1.5em;
+    padding: 20px 80px;
+}
+#boton-2{
+    font-size: 1.5em;
+
+}
+}
+
+
+#boton-1:hover {
+    background-color: #6d8ba0;
+    transform: scale(1.1);
+    color: #183d55;
+}
+
+#boton-2:hover {
+    background-color: #6d8ba0;
+    transform: scale(1.1);
+    color: #183d55;
+}
+
+.siguiente-seccion-flecha {
+    color: #161616;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding-top: 10%;
+
+}
+
+#flecha-abajo {
+    margin-top: 8vh;
+    margin-bottom: 130px;
+}
+@media only screen and (max-width : 900px){
+    #flecha-abajo{
+        margin-top: 14vh;
+        transform: scale(.5);
+
+    }
+}
+
+/*--------Parte dos de página de inicio- Preguntas qué y para qué*/
+
+.preguntas {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+    
+}
+
+.card-g {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    border-style: solid;
+    border-color: #183d55;
+    margin: 1px;
+    border-radius: 15px;
+    border-width: 2px;
+    width: 400px;
+    margin-top: 15px;
+    background-color: none;
+}
+
+.card-1{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: justify;
+    color: #183d55;
+}
+
+.card-2 {
+    flex-grow: 1;
+}
+
+h3 {
+    color: #183d55;
+    font-size: 30px;
+    font-family: "Anton", sans-serif;
+    font-optical-sizing: auto;
+    font-style: bold;
+    margin-bottom: 10px;
+    margin-top: 2%;
+    text-align: center;
+
+}
+
+h6 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.card-2 ul {
+    text-align: justify;
+    margin: 5px;
+    list-style: circle;
+    line-height: 20px;
+}
+
+.ver-mas {
+    margin-top: 5%;
+    margin-bottom: 0%;
+    padding: 3%;
+    border-style: solid;
+    border-color: #183d55;
+    border-radius: 15%;
+    text-align: center;
+    width: 50%;
+    align-self: center;
+    color: #183d55;
+
+
+}
+
+.ver-mas:hover {
+    background-color: #6d8ba0;
+    transform: scale(1.1);
+    color:#e7e7e7;
+}
+
+
+/*--------boton de contacto*/
+
+.boton-secundario {
+    all: inherit;
+    display: flex;
+    /* Para que se comporte como un botón */
+    cursor: pointer;
+    /* Cambia el cursor a una mano cuando pase sobre el botón */
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+
+    font-family: "Anton", sans-serif;
+    padding-top: 3%;
+
+}
+
+#boton-3 {
+    padding: 20px;
+    box-sizing: border-box;
+    border-color: #183d55;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: #183d55;
+    font-size: 2em;
+    color: #e7e7e7;
+}
+
+#boton-3:hover {
+    background-color: #6d8ba0;
+    transform: scale(1.1);
+    color: #183d55;
+}
+
+/*Página Contacto*/
+
+.form{
+    border-color: #183d55;
+    border-radius: 5px;
+    border-style: solid;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 3%;
+    padding-top: 1%;
+
+}
+
+
+#boton-4 {
+    padding: 10px;
+    box-sizing: border-box;
+    border-color: #183d55;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: #e7e7e7;
+    font-size: 20px;
+    font-family: "Urbanist", sans-serif;
+    color: #183d55;
+}
+
+#boton-4:hover {
+    background-color: #d2d9e2;
+    transform: scale(1.1);
+}
+
+/*Página Nosotros*/
+
+
+/*Contenedor de Clientes*/
+.clientes{
+    border-color: #183d55;
+    border-radius: 5px;
+    border-style: solid;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 3%;
+    padding-top: 1%;
+    height: 500px;
+}
+
+.custom-card {
+    background-color: #d2d9e2; 
+    color: #183d55;
+    margin-top: 10%;
+    border-color: #183d55;
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 90%; 
+}
+
+
+
+.card-body {
+    flex-grow: 1;
+}
+
+.custom-img {
+    height: 150px; 
+    object-fit: cover;
+}
+
+
+.carousel-control-prev-icon {
+    background-image: none;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23183D55' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E"); /* Flecha izquierda */
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23183D55' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E"); /* Compatibilidad para WebKit */
+    background-color: #183d55;
+    width: 30px;
+    height: 30px;
+}
+
+
+.carousel-control-next-icon {
+    background-image: none; 
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23183D55' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); /* Flecha derecha */
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23183D55' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); /* Compatibilidad para WebKit */
+    background-color: #183d55; 
+    width: 30px;
+    height: 30px;
+}
+
