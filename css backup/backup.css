@@ -53,7 +53,7 @@ input[type="submit"] {
 body {
     background-color: #e7e7e7;
     font-family: "Maven Pro", sans-serif;
-    color: 314648;
+    color: #314648;
     
 }
 
@@ -246,16 +246,6 @@ footer {
     color: #183d55;
 }
 
-.siguiente-seccion-flecha {
-    color: #161616;
-    font-size: 30px;
-    text-align: center;
-    font-family: "Urbanist", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    padding-top: 10%;
-
-}
 
 #flecha-abajo {
     margin-top: 8vh;

@@ -6,24 +6,33 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     text-align: center;
+    text-decoration: none;
     padding-top: 10%;
+    font-family: $font-secondary;
     
-    @media only screen and (max-width : 900px) {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding-top: 20%;
-    }
+}
+.boton-1{
+    padding: 20px 105px;
+    box-sizing: border-box;
+    border-color: variables.$color-secondary;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: variables.$color-bg-primary;
+    font-size: 2em;
+    justify-content: space-between;
+    color: variables.$color-secondary;
+    cursor: pointer;
 
-    .boton {
+    &:hover {
+        background-color: variables.$color-hover;
+        transform: scale(1.1);
+        color: variables.$color-primary;
+    }
+}
+
+ .boton-2 {
         padding: 20px;
-        box-sizing: border-box;
-        border-color: variables.$color-light;
-        border-radius: 15px;
-        border-style: solid;
-        background-color: variables.$color-primary;
-        font-size: 2em;
-        color: variables.$color-light;
-        cursor: pointer;
+       @extend .boton-1;
         
         &:hover {
             background-color: variables.$color-hover;
@@ -31,4 +40,67 @@
             color: variables.$color-primary;
         }
     }
-}
+
+ .boton-secundario {
+    all: inherit;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-family: variables.$font-primary;
+    padding-top: 3%;
+ }
+    
+ #boton-3 {
+    padding: 20px;
+    box-sizing: border-box;
+    border-color: variables.$color-primary;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: variables.$color-primary;
+    font-size: 2em;
+    color: variables.$color-secondary;
+
+    &:hover {
+        background-color: variables.$color-hover;
+        transform: scale(1.1);
+        color: variables.$color-primary;
+    }
+ }
+
+ #boton-4 {
+    padding: 10px;
+    box-sizing: border-box;
+    border-color: variables.$color-primary;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: variables.$color-secondary;
+    font-size: 20px;
+    font-family: variables.$font-tertiary;
+    color: variables.$color-primary;
+
+    &:hover {
+        background-color: variables.$color-hover;
+        transform: scale(1.1);
+    }
+
+ }
+
+@media only screen and (max-width : 900px) {
+        .botones-principales{
+         grid-template-columns: 1fr;
+        gap: 10px;
+        padding-top: 20%;   
+        }
+
+        .boton-1{
+            font-size: 1.5em;
+            padding: 20px 80px;
+        }
+        .boton-2{
+            font-size: 1.5em;
+        }
+        
+    }
+

@@ -1,5 +1,5 @@
 /*Archivos parciales importados*/
-@use 'variables' as*;
+@use 'variables';
 
 .form {
     border-color: variables.$color-primary;
@@ -8,4 +8,5 @@
     margin-left: 10%;
     margin-right: 10%;
     padding: 3%;
+    padding-top: 1%;
 }
