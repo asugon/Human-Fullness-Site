@@ -1,0 +1,24 @@
+/*Archivos parciales importados*/
+@use 'variables';
+
+footer {
+    padding: 20px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 3%;
+    
+    .logo-but {
+        transform: scale(0.7);
+        opacity: .5;
+    }
+
+    @media only screen and (max-width : 900px) {
+        footer {
+            transform: scale(.8);
+            align-items: start;
+            justify-content: space-around;
+            padding: 0%;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+/*Archivos parciales importados*/
+@use 'variables' as*;
+
+.form {
+    border-color: variables.$color-primary;
+    border-radius: 5px;
+    border-style: solid;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 3%;
+}

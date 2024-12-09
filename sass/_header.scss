@@ -1,0 +1,52 @@
+/*Archivos parciales importados*/
+@use 'variables';
+
+header {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    top: 0%;
+    background-color: variables.$color-primary;
+    align-items: center;
+    padding: 1%;
+    height: 13vh;
+    width: 100vw;
+    color: variables.$color-light;
+    
+    #logo-up {
+        padding: 10px 0px 0px 30px;
+    }
+
+    nav {
+        width: 60%;
+        margin-right: 10px;
+        font-size: 1.5rem;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    @media only screen and (max-width : 900px) {
+        header {
+            justify-content: space-between;
+        }
+
+        #logo-up {
+            transform: scale(.5);
+            padding: 0px;
+        }
+
+        nav {
+            margin-right: 0px;
+            width: auto;
+            font-size: 1rem;
+            
+            ul {
+                flex-direction: column;
+                justify-content: right;
+            }
+        }
+    }
+}
