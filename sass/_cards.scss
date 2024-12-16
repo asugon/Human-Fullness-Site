@@ -1,5 +1,5 @@
 /*Archivos parciales importados*/
-@use 'variables';
+@use './variables';
 
 
 /*Sección Qué y para qué*/
@@ -15,7 +15,7 @@
     flex-direction: column;
     padding: 2%;
     border-style: solid;
-    border-color: variables.$color-bg-primary;
+    border-color: variables.$color-primary;
     margin: 1px;
     border-radius: 15px;
     border-width: 2px;
@@ -74,7 +74,7 @@
 }
 
 .custom-card {
-    background-color: variable.$color-hover;
+    background-color: variables.$color-hover;
     color: variables.$color-primary;
     margin-top: 10%;
     border-color: variables.$color-primary;
@@ -93,7 +93,20 @@
 .custom-img {
     height: 150px;
     object-fit: cover;
+    
 }
+
+@media (max-width: 900px) {
+    .carousel-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel-item .col-12 {
+        width: 100%;
+    }
+}
+
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -103,7 +116,12 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
-    background-color: variable.$color-primary;
+    background-color: variables.$color-primary;
     width: 30px;
     height: 30px;
+
+}
+
+.carousel-control-next-icon {
+    transform: rotate(180deg);
 }

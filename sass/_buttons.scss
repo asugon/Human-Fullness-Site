@@ -1,5 +1,5 @@
 /*Archivos parciales importados*/
-@use 'variables';
+@use './variables';
 
 .botones-principales {
     display: grid;
@@ -8,16 +8,17 @@
     text-align: center;
     text-decoration: none;
     padding-top: 10%;
-    font-family: $font-secondary;
+    font-family: variables.$font-secondary;
+    
     
 }
-.boton-1{
+#boton-1{
     padding: 20px 105px;
     box-sizing: border-box;
     border-color: variables.$color-secondary;
     border-radius: 15px;
     border-style: solid;
-    background-color: variables.$color-bg-primary;
+    background-color: variables.$color-primary;
     font-size: 2em;
     justify-content: space-between;
     color: variables.$color-secondary;
@@ -30,9 +31,9 @@
     }
 }
 
- .boton-2 {
+ #boton-2 {
         padding: 20px;
-       @extend .boton-1;
+       @extend #boton-1;
         
         &:hover {
             background-color: variables.$color-hover;

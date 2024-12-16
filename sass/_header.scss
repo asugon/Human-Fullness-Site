@@ -1,5 +1,5 @@
 /*Archivos parciales importados*/
-@use 'variables';
+@use './variables';
 
 header {
     display: flex;
@@ -10,7 +10,7 @@ header {
     align-items: center;
     padding: 1%;
     height: 13vh;
-    width: 100vw;
+    width: 100%;
     color: variables.$color-secondary;
     
     #logo-up {
@@ -46,6 +46,7 @@ header {
             ul {
                 flex-direction: column;
                 justify-content: right;
+                padding: 0%;
             }
         }
     }
