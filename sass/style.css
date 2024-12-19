@@ -158,6 +158,7 @@ footer .logo-but {
 }
 
 #boton-3 {
+  margin-top: 20px;
   padding: 20px;
   box-sizing: border-box;
   border-color: #183d55;
@@ -271,7 +272,7 @@ footer .logo-but {
 }
 
 .custom-card {
-  background-color: #8ba7bb;
+  background-color: #e7e7e7;
   color: #183d55;
   margin-top: 10%;
   border-color: #183d55;
