@@ -1,6 +1,32 @@
-/*Archivos parciales importados*/
+/* Archivos parciales importados */
 @use './variables';
 
+/* Mixins */
+@mixin button-styles($bg-color, $text-color, $border-color, $font-family, $padding: 20px, $font-size: 2em) {
+    padding: $padding;
+    box-sizing: border-box;
+    border-color: $border-color;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: $bg-color;
+    font-size: $font-size;
+    font-family: $font-family;
+    color: $text-color;
+    cursor: pointer;
+
+    &:hover {
+        background-color: variables.$color-hover;
+        transform: scale(1.1);
+        color: $bg-color;
+    }
+}
+
+@mixin responsive-button($font-size, $padding) {
+    font-size: $font-size;
+    padding: $padding;
+}
+
+/* Estilos generales */
 .botones-principales {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -9,40 +35,28 @@
     text-decoration: none;
     padding-top: 10%;
     font-family: variables.$font-secondary;
-    
-    
-}
-#boton-1{
-    padding: 20px 105px;
-    box-sizing: border-box;
-    border-color: variables.$color-secondary;
-    border-radius: 15px;
-    border-style: solid;
-    background-color: variables.$color-primary;
-    font-size: 2em;
-    justify-content: space-between;
-    color: variables.$color-secondary;
-    cursor: pointer;
-
-    &:hover {
-        background-color: variables.$color-hover;
-        transform: scale(1.1);
-        color: variables.$color-primary;
-    }
 }
 
- #boton-2 {
-        padding: 20px;
-       @extend #boton-1;
-        
-        &:hover {
-            background-color: variables.$color-hover;
-            transform: scale(1.1);
-            color: variables.$color-primary;
-        }
-    }
+/* Botones */
+#boton-1 {
+    @include button-styles(variables.$color-primary, variables.$color-secondary, variables.$color-secondary, variables.$font-secondary, 20px 105px);
+}
 
- .boton-secundario {
+#boton-2 {
+    @include button-styles(variables.$color-primary, variables.$color-secondary, variables.$color-secondary, variables.$font-secondary);
+}
+
+#boton-3 {
+    @include button-styles(variables.$color-primary, variables.$color-secondary, variables.$color-primary, variables.$font-secondary);
+    margin-top: 20px;
+}
+
+#boton-4 {
+    @include button-styles(variables.$color-secondary, variables.$color-primary, variables.$color-primary, variables.$font-tertiary, 10px, 20px);
+}
+
+/* Botón secundario */
+.boton-secundario {
     all: inherit;
     display: flex;
     justify-items: center;
@@ -51,58 +65,23 @@
     text-decoration: none;
     font-family: variables.$font-primary;
     padding-top: 3%;
- }
-    
- #boton-3 {
-    margin-top: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-    border-color: variables.$color-primary;
-    border-radius: 15px;
-    border-style: solid;
-    background-color: variables.$color-primary;
-    font-size: 2em;
-    color: variables.$color-secondary;
+}
 
-    &:hover {
-        background-color: variables.$color-hover;
-        transform: scale(1.1);
-        color: variables.$color-primary;
-    }
- }
-
- #boton-4 {
-    padding: 10px;
-    box-sizing: border-box;
-    border-color: variables.$color-primary;
-    border-radius: 15px;
-    border-style: solid;
-    background-color: variables.$color-secondary;
-    font-size: 20px;
-    font-family: variables.$font-tertiary;
-    color: variables.$color-primary;
-
-    &:hover {
-        background-color: variables.$color-hover;
-        transform: scale(1.1);
-    }
-
- }
-
-@media only screen and (max-width : 900px) {
-        .botones-principales{
-         grid-template-columns: 1fr;
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+    .botones-principales {
+        grid-template-columns: 1fr;
         gap: 10px;
-        padding-top: 20%;   
-        }
-
-        .boton-1{
-            font-size: 1.5em;
-            padding: 20px 80px;
-        }
-        .boton-2{
-            font-size: 1.5em;
-        }
-        
+        padding-top: 20%;
     }
+
+    #boton-1 {
+        @include responsive-button(1.5em, 20px 80px);
+    }
+
+    #boton-2 {
+        @include responsive-button(1.5em, 20px);
+    }
+}
+
 
