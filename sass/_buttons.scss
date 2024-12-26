@@ -82,6 +82,11 @@
     #boton-2 {
         @include responsive-button(1.5em, 20px);
     }
+
+    #boton-3 {
+        @include responsive-button(1.5em, 10px 20px);
+        margin-top: 50px;
+    }
 }
 
 

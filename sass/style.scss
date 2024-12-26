@@ -15,8 +15,47 @@ body {
     background-color: variables.$color-bg-primary;
     font-family: variables.$font-primary;
     color: variables.$color-primary;
-    
+
 }
+
+/*animacion tracking-in-expand*/
+
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+    animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 
 h1 {
     color: variables.$color-primary;
@@ -25,7 +64,7 @@ h1 {
     font-weight: 500;
     letter-spacing: 15px;
     margin-top: 6%;
-    
+
     @media only screen and (max-width : 900px) {
         margin-left: 10%;
         margin-right: 10%;
@@ -50,20 +89,36 @@ h6 {
     font-size: 20px;
     margin-bottom: 5px;
 }
+
 .siguiente-seccion-flecha {
     display: flex;
     align-items: center;
     justify-content: center;
 
     #flecha-abajo {
-    margin-top: 10vh;
-    margin-bottom: 130px;
-   
-    @media only screen and (max-width : 900px) {
-        margin-top: 14vh;
-        transform: scale(.5);
+        margin-top: 10vh;
+        margin-bottom: 130px;
+
+        @media only screen and (max-width : 900px) {
+            margin-top: 14vh;
+            transform: scale(.5);
+        }
     }
-}
 
 }
 
+.contenedor-infografia {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0px;
+
+    .infografia {
+        border-style: solid;
+        border-color: variables.$font-primary;
+    }
+
+}

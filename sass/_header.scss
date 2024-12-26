@@ -34,14 +34,15 @@ header {
         }
 
         #logo-up {
-            transform: scale(.5);
+            transform: scale(.7);
             padding: 0px;
         }
 
         nav {
             margin-right: 0px;
-            width: auto;
             font-size: 1rem;
+            width: auto;
+        
             
             ul {
                 flex-direction: column;

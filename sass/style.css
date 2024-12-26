@@ -73,13 +73,13 @@ header nav ul {
     justify-content: space-between;
   }
   header #logo-up {
-    transform: scale(0.5);
+    transform: scale(0.7);
     padding: 0px;
   }
   header nav {
     margin-right: 0px;
-    width: auto;
     font-size: 1rem;
+    width: auto;
   }
   header nav ul {
     flex-direction: column;
@@ -222,6 +222,11 @@ footer .logo-but {
     font-size: 1.5em;
     padding: 20px;
   }
+  #boton-3 {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-top: 50px;
+  }
 }
 /*Archivos parciales importados*/
 /*Sección Qué y para qué*/
@@ -242,6 +247,7 @@ footer .logo-but {
   border-width: 2px;
   width: 400px;
   margin-top: 15px;
+  margin-bottom: 30px;
   background-color: none;
 }
 .card-g .card-1 {
@@ -259,6 +265,7 @@ footer .logo-but {
   margin: 5px;
   list-style: circle;
   line-height: 20px;
+  margin-left: 20px;
 }
 
 .ver-mas {
@@ -313,20 +320,12 @@ footer .logo-but {
      object-fit: cover;
 }
 
-@media (max-width: 900px) {
-  .carousel-item {
-    display: flex;
-    justify-content: center;
-  }
-  .carousel-item .col-12 {
-    width: 100%;
-  }
-}
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-image: none;
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23183D55' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23183D55' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E"); /* Compatibilidad para WebKit */
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23183D55' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+  /* Compatibilidad para WebKit */
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -349,6 +348,22 @@ body {
   color: #183d55;
 }
 
+/*animacion tracking-in-expand*/
+.tracking-in-expand {
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s both;
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 h1 {
   color: #183d55;
   font-size: 3em;
@@ -397,4 +412,17 @@ h6 {
     margin-top: 14vh;
     transform: scale(0.5);
   }
+}
+
+.contenedor-infografia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0px;
+}
+.contenedor-infografia .infografia {
+  border-style: solid;
+  border-color: "Maven Pro", sans-serif;
 }/*# sourceMappingURL=style.css.map */

@@ -21,16 +21,17 @@
     border-width: 2px;
     width: 400px;
     margin-top: 15px;
+    margin-bottom: 30px;
     background-color: none;
-    
-    .card-1{
+
+    .card-1 {
         margin-top: 15px;
         margin-bottom: 10px;
         text-align: justify;
         color: variables.$color-primary;
     }
 
-    .card-2{
+    .card-2 {
         flex-grow: 1;
     }
 }
@@ -40,6 +41,7 @@
     margin: 5px;
     list-style: circle;
     line-height: 20px;
+    margin-left: 20px;
 }
 
 .ver-mas {
@@ -93,26 +95,18 @@
 .custom-img {
     height: 150px;
     object-fit: cover;
+
+}
+
     
-}
-
-@media (max-width: 900px) {
-    .carousel-item {
-        display: flex;
-        justify-content: center;
-    }
-
-    .carousel-item .col-12 {
-        width: 100%;
-    }
-}
 
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-image: none;
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23183D55' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23183D55' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E"); /* Compatibilidad para WebKit */
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23183D55' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+    /* Compatibilidad para WebKit */
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
